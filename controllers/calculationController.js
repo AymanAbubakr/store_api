@@ -69,7 +69,7 @@ exports.getCalculation = (req, res, next) => {
       let totalResult = {};
       for (const key in StoresAndCategorysId) {
         for (const categoryKey in totalOfProductForEachCategory) {
-          if (StoresAndCategorysId[key].includes(parseFloat(categoryKey))) {
+          if (StoresAndCategorysId[key].includes(parseInt(categoryKey))) {
             let obj = {};
             obj[categoryKey] = totalOfProductForEachCategory[categoryKey];
             if (totalResult.hasOwnProperty(key)) {
